@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/stringToEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="450sp"
+        android:textSize="50sp"
+        android:text=""
+        android:gravity="end|bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- First row of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="7"
+            app:cornerRadius="4dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit"/>
+
+        <Button
+            android:text="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="/"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+    </LinearLayout>
+
+    <!-- Second row of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="*"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+    </LinearLayout>
+
+    <!-- Third row of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+    </LinearLayout>
+
+    <!-- Fourth row of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:onClick="onDigit" />
+
+        <Button
+            android:text="CLR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:onClick="clearInput"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+    </LinearLayout>
+
+    <!-- Equal button (single button row) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="="
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cornerRadius="3dp"
+            android:onClick="evluateExpression"
+            android:layout_margin="2dp" />
+    </LinearLayout>
+
+</LinearLayout>
